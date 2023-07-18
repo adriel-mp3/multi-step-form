@@ -1,0 +1,48 @@
+.wrapper {
+  background: url('../../assets/images/bg-sidebar-desktop.svg') no-repeat;
+  height: 570px;
+}
+
+.navList {
+  padding: 30px 100px 0 30px;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navItem {
+  margin-bottom: 30px;
+}
+
+.stepNumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius:50%;
+  border: 1px solid var(--light-gray);
+  color: var(--light-gray);
+  font-weight: 700;
+  transition: .3s;
+}
+
+.navLink:global(.active) .stepNumber{
+  background: var(--light-blue);
+  color:var(--purplish-blue);
+}
+
+.stepLabel {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--cool-gray);
+  margin-bottom: 3px;
+}
+
+.stepTitle {
+  font-weight: 700;
+  color: var(--light-gray);
+}
