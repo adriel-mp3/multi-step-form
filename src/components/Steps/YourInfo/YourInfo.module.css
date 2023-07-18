@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content > input + label {
+  margin-top: 25px;
+  flex: 1;
+}
+
+.button {
+  align-self: flex-end;
+}
