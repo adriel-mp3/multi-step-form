@@ -19,19 +19,24 @@
   box-sizing: border-box;
 }
 
-body {
-  background: var(--magnolia);
-  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
-}
-
 body,
 h1,
 ul,
 li,
 p,
-a {
+a,
+h3 {
   margin: 0;
   padding: 0;
+}
+
+body {
+  background: var(--magnolia);
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 ul,
@@ -46,5 +51,23 @@ a {
 
 .mainContainer {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto minmax(600px,1fr);
+  background: var(--white);
+  padding: 10px;
+  gap: 30px;
+  border-radius: 6px;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, .05);
 }
+
+.formContainer {
+  padding: 40px 60px;
+}
+
+.sr-only {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
