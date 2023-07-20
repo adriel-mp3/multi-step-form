@@ -1,0 +1,52 @@
+.wrapper {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, .1);
+  background: var(--alabaste);
+  border: 1px solid var(--light-gray);
+}
+
+.wrapper:hover {
+  border: 1px solid var(--purplish-blue);
+}
+
+.activePlan {
+  border: 1px solid var(--purplish-blue);
+}
+
+.wrapper > input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.img {
+  margin-bottom: 30px;
+}
+
+.title {
+  color: var(--marine-blue);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.price {
+  font-size: 0.875rem;
+  color: var(--cool-gray);
+}
+
+.yearly {
+  color: var(--marine-blue);
+  display: block;
+  font-size: 0.875rem;
+  margin-top: 5px;
+  font-weight: 500;
+}
