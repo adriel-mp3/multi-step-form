@@ -51,7 +51,9 @@ const YourInfo = () => {
           {...number}
         />
       </form>
-      <NextStep onClick={handleNextButton} />
+      <div className={styles.buttonWrapper}>
+        <NextStep onClick={handleNextButton} />
+      </div>
     </div>
   );
 };
