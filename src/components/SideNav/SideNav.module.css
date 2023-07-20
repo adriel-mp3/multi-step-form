@@ -46,3 +46,22 @@
   font-weight: 700;
   color: var(--light-gray);
 }
+
+@media (max-width:900px) {
+  .wrapper {
+    background: url('../../assets/images/bg-sidebar-mobile.svg') no-repeat;
+    background-size: cover;
+    height: initial;
+  }
+
+  .stepLabel,
+  .stepTitle {
+    display: none;
+  }
+
+  .navList {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+  }
+}
