@@ -9,4 +9,5 @@
 
 .wrapper p {
   color:var(--cool-gray);
+  line-height: 1.5;
 }
