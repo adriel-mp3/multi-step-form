@@ -1,0 +1,80 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.summary {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.summaryHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--light-gray);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.summaryHeader h3,
+.summaryHeader span {
+  color: var(--marine-blue);
+  font-weight: 500;
+}
+
+.summaryHeader h3 {
+  padding-bottom: 4px;
+  text-transform: capitalize;
+}
+
+.summaryHeader a {
+  text-decoration: underline;
+  color: var(--cool-gray);
+}
+
+.addon {
+  display: flex;
+  justify-content: space-between;
+  color: var(--cool-gray);
+}
+
+.addon + .addon {
+  margin-top: 20px;
+}
+
+.addon span {
+  color: var(--marine-blue);
+  font-weight: 500;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+  color: var(--cool-gray);
+}
+
+.total span {
+  font-size: 1.25rem;
+  color: var(--purplish-blue);
+  font-weight: 700;
+}
+
+.buttonsWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  color:var(--white);
+  border: none;
+  background: var(--purplish-blue);
+  padding: 13px 20px;
+  border-radius: 6px;
+  font-family: 'Ubuntu', sans-serif;
+  cursor: pointer;
+  align-self: flex-end;
+}
