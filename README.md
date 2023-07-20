@@ -15,7 +15,7 @@ After installing the dependencies, start the application with the following comm
 <pre>npm run dev</pre>
 
 <div align="center">
-  <img align="center" src="./src/assets/images/active-states-step-1.jpg">
+  <img align="center" src="./src/assets/images/desktop-preview.jpg">
 </div>
 
 Built With
@@ -24,5 +24,3 @@ Built With
 - React.js
 - React Router Dom
 - CSS modules
-
-
