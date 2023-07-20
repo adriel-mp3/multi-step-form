@@ -15,6 +15,17 @@
   color: var(--cool-gray);
 }
 
+.input[type="text"]:hover,
+.input[type="email"]:hover,
+.input[type="tel"]:hover {
+  border: 1px solid var(--purplish-blue);
+}
+.input[type="text"]:focus,
+.input[type="email"]:focus,
+.input[type="tel"]:focus {
+  outline-color: var(--purplish-blue);
+}
+
 .label {
   display: block;
   color: var(--marine-blue);

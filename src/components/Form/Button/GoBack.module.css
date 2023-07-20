@@ -5,3 +5,8 @@
   font-weight: 700;
   cursor: pointer;
 }
+
+.button:hover {
+  color: var(--marine-blue);
+  font-weight: 700;
+}

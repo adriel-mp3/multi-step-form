@@ -77,8 +77,16 @@
   font-family: 'Ubuntu', sans-serif;
   cursor: pointer;
   align-self: flex-end;
+  transition: .3s;
 }
 
+.button:hover {
+  background: hsl(243, 100%, 72%);
+}
+
+.summaryHeader a:hover {
+  color: var(--purplish-blue);
+}
 
 @media (max-width:900px) {
 

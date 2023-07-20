@@ -7,4 +7,9 @@
   font-family: 'Ubuntu', sans-serif;
   cursor: pointer;
   align-self: flex-end;
+  transition: .3s;
+}
+
+.button:hover {
+  background: hsl(213, 96%, 22%);
 }

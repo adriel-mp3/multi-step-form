@@ -9,7 +9,7 @@ import { FormContext } from "../../../context/FormContext";
 
 const AddOns = () => {
   const { addOns, setAddOns } = React.useContext(FormContext);
-  
+
   return (
     <div className={`formContainer ${styles.wrapper}`}>
       <form className={styles.formWrapper}>

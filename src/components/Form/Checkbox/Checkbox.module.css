@@ -8,12 +8,16 @@
   padding: 20px;
 }
 
+.wrapper:hover {
+  border-color:var(--purplish-blue);
+}
+
 .checkbox {
   transform: scale(1.2);
 }
 
-.checkbox:checked .wrapper{
-  border-color:red;
+.wrapper:global(.activeWrapper) {
+  border-color:var(--purplish-blue);
 }
 
 .title {

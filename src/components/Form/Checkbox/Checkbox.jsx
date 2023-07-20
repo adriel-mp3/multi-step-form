@@ -2,10 +2,17 @@ import React from "react";
 import styles from "./Checkbox.module.css";
 import { FormContext } from "../../../context/FormContext";
 
-const Checkbox = ({ title, description, price, name, value, addOns, setAddOns }) => {
+const Checkbox = ({
+  title,
+  description,
+  price,
+  name,
+  value,
+  addOns,
+  setAddOns,
+}) => {
   const { period } = React.useContext(FormContext);
-  
-  
+
   function handleChange({ target }) {
     const { checked, value } = target;
     if (checked) {
@@ -14,13 +21,15 @@ const Checkbox = ({ title, description, price, name, value, addOns, setAddOns })
       setAddOns(addOns.filter((addOn) => addOn !== value));
     }
   }
-  
+
   function handleChecked(addOn) {
     return addOns.includes(addOn);
   }
 
   return (
-    <div className={styles.wrapper}>
+    <div
+      className={`${styles.wrapper} ${addOns.includes(value) ? 'activeWrapper' : ''}`}
+    >
       <label htmlFor={name} className="sr-only">
         {title}
       </label>

@@ -7,7 +7,7 @@ import { FormContext } from "../../../context/FormContext";
 import useForm from "../../../hooks/useForm";
 import { useNavigate } from "react-router-dom";
 const YourInfo = () => {
-  const { personalInfo, setPersonalInfo } = React.useContext(FormContext);
+  const { setPersonalInfo } = React.useContext(FormContext);
   const navigate = useNavigate();
   const name = useForm();
   const email = useForm("email");
