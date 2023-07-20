@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.wrapper img {
+  margin-bottom: 20px;
+}
+
+.wrapper p {
+  max-width: 55ch;
+  line-height: 1.5;
+}
