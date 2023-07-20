@@ -50,3 +50,15 @@
   margin-top: 5px;
   font-weight: 500;
 }
+
+@media (max-width:900px) {
+  .wrapper {
+    display: flex;
+    align-items: center;
+    gap:10px;
+    width: 100%;
+  }
+  .img {
+    margin-bottom: 0;
+  }
+}
