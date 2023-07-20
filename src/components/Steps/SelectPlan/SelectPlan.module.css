@@ -35,3 +35,24 @@
   color: var(--marine-blue) !important;
 }
 
+@media (max-width:900px) {
+
+  .buttonsWrapper {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background:var(--magnolia);
+    padding: 20px;
+  }
+
+  .radioWrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .planWrapper {
+    display: flex;
+  }
+}
+

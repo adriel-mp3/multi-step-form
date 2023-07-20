@@ -16,9 +16,6 @@ const SelectPlan = () => {
     React.useContext(FormContext);
   const navigate = useNavigate();
 
-  function handleNextButton() {
-    navigate("/add-ons");
-  }
   return (
     <div className={`formContainer ${styles.wrapper}`}>
       <form>
@@ -28,7 +25,7 @@ const SelectPlan = () => {
         />
         <div className={styles.radioWrapper}>
           <Radio
-            label="teste"
+            label="Arcade"
             name="arcade"
             title="Arcade"
             price="9"
@@ -37,7 +34,7 @@ const SelectPlan = () => {
             value={selectedPlan}
           />
           <Radio
-            label="teste"
+            label="Advanced"
             name="advanced"
             title="Advanced"
             price="12"
@@ -46,7 +43,7 @@ const SelectPlan = () => {
             value={selectedPlan}
           />
           <Radio
-            label="teste"
+            label="Pro"
             name="pro"
             title="Pro"
             price="15"
