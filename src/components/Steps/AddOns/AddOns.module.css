@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.formWrapper {
+  display: grid;
+  gap: 15px;
+}
+
+.buttonsWrapper {
+  display: flex;
+  justify-content: space-between;
+}
