@@ -14,3 +14,17 @@
   max-width: 55ch;
   line-height: 1.5;
 }
+
+@media (max-width:900px) {
+  .wrapper {
+    position: absolute;
+    top: 90px;
+    right: 0px;
+    left: 0px;
+    background: var(--alabaster);
+    border-radius: 6px;
+    margin: 0 20px;
+    padding: 40px 40px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, .05);
+  }
+}
