@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { FormContext } from "@/context/FormContext";
 
 import { Header } from "@/components/Form/Header/index";
-import { GoBack } from "@/components/Form/Button/GoBack/index";
+import { GoBack } from "@/components/Button/GoBack/index";
 
 import { prices, adds } from "./helper/summary";
 

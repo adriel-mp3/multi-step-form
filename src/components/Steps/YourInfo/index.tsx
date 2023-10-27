@@ -8,7 +8,7 @@ import { FormContext } from "@/context/FormContext";
 
 import { Header } from "@/components/Form/Header/index";
 import { Input } from "@/components/Form/Input/index";
-import { NextStep } from "@/components/Form/Button/NextStep";
+import { NextStep } from "@/components/Button/NextStep/index";
 
 import styles from "./styles.module.css";
 

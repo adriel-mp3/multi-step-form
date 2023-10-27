@@ -7,8 +7,8 @@ import { FormContext } from "@/context/FormContext";
 import { Header } from "@/components/Form/Header";
 import { Radio } from "@/components/Form/Radio/index";
 import { ToggleSwitch } from "@/components/Form/ToggleSwitch/index";
-import { NextStep } from "@/components/Form/Button/NextStep";
-import { GoBack } from "@/components/Form/Button/GoBack";
+import { NextStep } from "@/components/Button/NextStep/index";
+import { GoBack } from "@/components/Button/GoBack/index";
 
 import arcadeIcon from "@/assets/images/icon-arcade.svg";
 import advancedIcon from "@/assets/images/icon-advanced.svg";

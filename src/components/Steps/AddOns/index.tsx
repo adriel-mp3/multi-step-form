@@ -2,11 +2,12 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import { Header } from "../../Form/Header/index";
-import { Checkbox } from "../../Form/Checkbox/index";
-import { GoBack } from "../../Form/Button/GoBack/index";
-import { NextStep } from "../../Form/Button/NextStep/index";
-import { FormContext } from "../../../context/FormContext";
+import { Header } from "@/components/Form/Header/index";
+import { Checkbox } from "@/components/Form/Checkbox/index";
+import { GoBack } from "@/components/Button/GoBack/index";
+import { NextStep } from "@/components/Button/NextStep/index";
+
+import { FormContext } from "@/context/FormContext";
 
 import styles from "./styles.module.css";
 
@@ -59,4 +60,3 @@ export const AddOns = () => {
     </div>
   );
 };
-
