@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.formWrapper {
+  display: grid;
+  gap: 15px;
+}
+
+.buttonsWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.activeCheckbox {
+  border: 1px solid var(--purplish-blue);
+}
+@media (max-width:900px) {
+  .buttonsWrapper {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background:var(--magnolia);
+    padding: 20px;
+  }
+}

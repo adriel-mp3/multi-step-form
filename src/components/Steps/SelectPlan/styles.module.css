@@ -1,0 +1,58 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.radioWrapper {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.radioWrapper > * {
+  flex: 1;
+}
+
+.switcherWrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center
+}
+
+.switcherWrapper > span {
+  font-weight: 500;
+  color: var(--cool-gray);
+}
+
+.buttonsWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.periodActive {
+  font-weight: 700;
+  color: var(--marine-blue) !important;
+}
+
+@media (max-width:900px) {
+
+  .buttonsWrapper {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background:var(--magnolia);
+    padding: 20px;
+  }
+
+  .radioWrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .planWrapper {
+    display: flex;
+  }
+}
+

@@ -1,0 +1,30 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid var(--light-gray);
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.wrapper:hover {
+  border-color:var(--purplish-blue);
+}
+
+.checkbox {
+  transform: scale(1.2);
+}
+
+.wrapper:global(.activeWrapper) {
+  border-color:var(--purplish-blue);
+}
+
+.title {
+  color: var(--marine-blue);
+  font-weight: 500;
+}
+
+.description {
+  color: var(--cool-gray);
+}

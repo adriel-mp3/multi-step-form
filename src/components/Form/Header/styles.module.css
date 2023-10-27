@@ -1,0 +1,13 @@
+.wrapper {
+  margin-bottom: 20px;
+}
+
+.wrapper h1 {
+  color: var(--marine-blue);
+  margin-bottom: 10px;
+}
+
+.wrapper p {
+  color:var(--cool-gray);
+  line-height: 1.5;
+}
