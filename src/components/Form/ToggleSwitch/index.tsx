@@ -1,8 +1,10 @@
 import React from "react";
-import styles from "./ToggleSwitch.module.css";
+
 import { FormContext } from "../../../context/FormContext";
 
-const ToggleSwitch = () => {
+import styles from "./styles.module.css";
+
+export const ToggleSwitch = () => {
   const { period, setPeriod } = React.useContext(FormContext);
   return (
     <div>
@@ -24,5 +26,3 @@ const ToggleSwitch = () => {
     </div>
   );
 };
-
-export default ToggleSwitch;

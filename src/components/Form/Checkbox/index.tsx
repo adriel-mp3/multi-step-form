@@ -1,8 +1,10 @@
 import React from "react";
-import { FormContext } from "../../../context/FormContext";
+
+import { FormContext } from "@/context/FormContext";
+
 import styles from "./styles.module.css";
 
-const Checkbox = ({
+export const Checkbox = ({
   title,
   description,
   price,
@@ -54,4 +56,3 @@ const Checkbox = ({
   );
 };
 
-export default Checkbox;

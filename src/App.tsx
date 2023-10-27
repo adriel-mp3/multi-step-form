@@ -1,13 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import YourInfo from "./components/Steps/YourInfo";
-import "./App.css";
-import SideNav from "./components/SideNav";
-import SelectPlan from "./components/Steps/SelectPlan/SelectPlan";
-import AddOns from "./components/Steps/AddOns";
-import Summary from "./components/Steps/Summary";
-import ThankYou from "./components/Steps/ThankYou";
+
+import { YourInfo } from "./components/Steps/YourInfo";
+import { SideNav } from "./components/SideNav/index";
+import { SelectPlan } from "./components/Steps/SelectPlan/index";
+import { AddOns } from "./components/Steps/AddOns/index";
+import { Summary } from "./components/Steps/Summary/index";
+import { ThankYou } from "./components/Steps/ThankYou/index";
 import { FormStorage } from "./context/FormContext";
 
+import "./App.css";
 function App() {
   return (
     <BrowserRouter>

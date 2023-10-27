@@ -1,13 +1,14 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
-import sidenavItems from "./helper/sidenavItems";
-import styles from "./SideNav.module.css";
 
-const SideNav = () => {
+import { sideNavData } from "./helper/SideNavData";
+
+import styles from "./styles.module.css";
+
+export const SideNav = () => {
   return (
     <nav className={styles.wrapper}>
       <ul className={styles.navList}>
-        {sidenavItems.map(({ stepTitle, route }, index) => (
+        {sideNavData.map(({ stepTitle, route }, index) => (
           <li key={route} className={styles.navItem}>
             <NavLink
               to={route}
@@ -26,5 +27,3 @@ const SideNav = () => {
     </nav>
   );
 };
-
-export default SideNav;

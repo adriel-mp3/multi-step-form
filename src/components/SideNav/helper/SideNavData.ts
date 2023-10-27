@@ -1,4 +1,4 @@
-const sidenavItems = [
+export const sideNavData = [
   {
     stepTitle: "YOUR INFO",
     route: "/",
@@ -17,4 +17,3 @@ const sidenavItems = [
   },
 ];
 
-export default sidenavItems;

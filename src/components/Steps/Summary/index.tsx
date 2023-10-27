@@ -1,11 +1,17 @@
 import React from "react";
-import Header from "../../Form/Header/Header";
-import styles from "./Summary.module.css";
+
 import { Link } from "react-router-dom";
-import GoBack from "../../Form/Button/GoBack";
-import { FormContext } from "../../../context/FormContext";
+
+import { FormContext } from "@/context/FormContext";
+
+import { Header } from "@/components/Form/Header/index";
+import { GoBack } from "@/components/Form/Button/GoBack/index";
+
 import { prices, adds } from "./helper/summary";
-const Summary = () => {
+
+import styles from "./styles.module.css";
+
+export const Summary = () => {
   const { selectedPlan, period, addOns } = React.useContext(FormContext);
 
   function calculateTotal() {
@@ -66,5 +72,3 @@ const Summary = () => {
     </div>
   );
 };
-
-export default Summary;

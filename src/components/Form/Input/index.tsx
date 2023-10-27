@@ -1,6 +1,6 @@
-import styles from "./Input.module.css";
+import styles from "./styles.module.css";
 
-const Input = ({
+export const Input = ({
   label,
   type,
   name,
@@ -30,5 +30,3 @@ const Input = ({
     </>
   );
 };
-
-export default Input;

@@ -1,7 +1,6 @@
-import React from "react";
-import styles from './Header.module.css';
+import styles from "./styles.module.css";
 
-const Header = ({ title, paragraph }) => {
+export const Header = ({ title, paragraph }) => {
   return (
     <div className={styles.wrapper}>
       <h1>{title}</h1>
@@ -9,5 +8,3 @@ const Header = ({ title, paragraph }) => {
     </div>
   );
 };
-
-export default Header;

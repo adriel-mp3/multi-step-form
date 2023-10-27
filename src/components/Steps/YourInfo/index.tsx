@@ -1,12 +1,18 @@
 import React from "react";
-import Header from "../../Form/Header/Header";
-import Input from "../../Form/Input/Input";
-import NextStep from "../../Form/Button/NextStep";
-import styles from "./YourInfo.module.css";
-import { FormContext } from "../../../context/FormContext";
-import useForm from "../../../hooks/useForm";
+
 import { useNavigate } from "react-router-dom";
-const YourInfo = () => {
+
+import { useForm } from "@/hooks/useForm";
+
+import { FormContext } from "@/context/FormContext";
+
+import { Header } from "@/components/Form/Header/index";
+import { Input } from "@/components/Form/Input/index";
+import { NextStep } from "@/components/Form/Button/NextStep";
+
+import styles from "./styles.module.css";
+
+export const YourInfo = () => {
   const { setPersonalInfo } = React.useContext(FormContext);
   const navigate = useNavigate();
   const name = useForm();
@@ -57,5 +63,3 @@ const YourInfo = () => {
     </div>
   );
 };
-
-export default YourInfo;

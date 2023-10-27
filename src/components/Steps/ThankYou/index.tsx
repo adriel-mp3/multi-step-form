@@ -1,8 +1,10 @@
-import React from "react";
-import Header from "../../Form/Header/Header";
-import checkmark from "../../../assets/images/icon-thank-you.svg";
-import styles from './ThankYou.module.css'
-const ThankYou = () => {
+import { Header } from "@/components/Form/Header/index";
+
+import checkmark from "@/assets/images/icon-thank-you.svg";
+
+import styles from "./styles.module.css";
+
+export const ThankYou = () => {
   return (
     <div className={styles.wrapper}>
       <img src={checkmark} alt="Checkmark" />
@@ -15,5 +17,3 @@ const ThankYou = () => {
     </div>
   );
 };
-
-export default ThankYou;

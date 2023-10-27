@@ -1,13 +1,16 @@
 import React from "react";
-import Header from "../../Form/Header/Header";
-import Checkbox from "../../Form/Checkbox/Checkbox";
-import GoBack from "../../Form/Button/GoBack";
-import NextStep from "../../Form/Button/NextStep";
-import styles from "./AddOns.module.css";
+
 import { Link } from "react-router-dom";
+
+import { Header } from "../../Form/Header/index";
+import { Checkbox } from "../../Form/Checkbox/index";
+import { GoBack } from "../../Form/Button/GoBack/index";
+import { NextStep } from "../../Form/Button/NextStep/index";
 import { FormContext } from "../../../context/FormContext";
 
-const AddOns = () => {
+import styles from "./styles.module.css";
+
+export const AddOns = () => {
   const { addOns, setAddOns } = React.useContext(FormContext);
 
   return (
@@ -57,4 +60,3 @@ const AddOns = () => {
   );
 };
 
-export default AddOns;

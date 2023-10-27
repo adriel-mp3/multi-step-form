@@ -1,17 +1,22 @@
 import React from "react";
-import styles from "./SelectPlan.module.css";
-import Header from "../../Form/Header/Header";
-import Radio from "../../Form/Radio/Radio";
-import arcadeIcon from "../../../assets/images/icon-arcade.svg";
-import advancedIcon from "../../../assets/images/icon-advanced.svg";
-import proIcon from "../../../assets/images/icon-pro.svg";
-import ToggleSwitch from "../../Form/ToggleSwitch/ToggleSwitch";
-import NextStep from "../../Form/Button/NextStep";
-import GoBack from "../../Form/Button/GoBack";
-import { FormContext } from "../../../context/FormContext";
+
 import { useNavigate } from "react-router-dom";
 
-const SelectPlan = () => {
+import { FormContext } from "@/context/FormContext";
+
+import { Header } from "@/components/Form/Header";
+import { Radio } from "@/components/Form/Radio/index";
+import { ToggleSwitch } from "@/components/Form/ToggleSwitch/index";
+import { NextStep } from "@/components/Form/Button/NextStep";
+import { GoBack } from "@/components/Form/Button/GoBack";
+
+import arcadeIcon from "@/assets/images/icon-arcade.svg";
+import advancedIcon from "@/assets/images/icon-advanced.svg";
+import proIcon from "@/assets/images/icon-pro.svg";
+
+import styles from "./styles.module.css";
+
+export const SelectPlan = () => {
   const { selectedPlan, setSelectedPlan, period } =
     React.useContext(FormContext);
   const navigate = useNavigate();
@@ -71,5 +76,3 @@ const SelectPlan = () => {
     </div>
   );
 };
-
-export default SelectPlan;

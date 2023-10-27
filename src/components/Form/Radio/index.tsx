@@ -1,8 +1,10 @@
 import React from "react";
-import styles from "./Radio.module.css";
+
 import { FormContext } from "../../../context/FormContext";
 
-const Radio = ({ label, name, icon, title, price, value, setValue }) => {
+import styles from "./styles.module.css";
+
+export const Radio = ({ label, name, icon, title, price, value, setValue }) => {
   const { period, selectedPlan } = React.useContext(FormContext);
 
   return (
@@ -35,5 +37,3 @@ const Radio = ({ label, name, icon, title, price, value, setValue }) => {
     </div>
   );
 };
-
-export default Radio;

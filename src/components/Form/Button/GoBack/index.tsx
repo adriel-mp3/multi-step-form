@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 
-const GoBack = ({ onClick }) => {
+export const GoBack = ({ onClick }) => {
   return (
     <button className={styles.button} onClick={onClick}>
       Go Back
@@ -8,4 +8,3 @@ const GoBack = ({ onClick }) => {
   );
 };
 
-export default GoBack;
