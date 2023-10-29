@@ -23,5 +23,6 @@ Built With
 - Vite
 - React.js
 - React Router Dom
-- CSS modules
+- Radix UI
+- CSS Modules
 - TypeScript
