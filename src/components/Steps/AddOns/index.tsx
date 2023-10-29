@@ -3,11 +3,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { Header } from "@/components/Form/Header/index";
-import { Checkbox } from "@/components/Form/Checkbox/index";
+import { Checkbox } from "@/components/Steps/AddOns/Checkbox";
 import { GoBack } from "@/components/Button/GoBack/index";
 import { NextStep } from "@/components/Button/NextStep/index";
 
 import { FormContext } from "@/context/FormContext";
+
+import { checkboxOptions } from "./helper/checkboxOptions";
 
 import styles from "./styles.module.css";
 
@@ -21,33 +23,13 @@ export const AddOns = () => {
           title="Pick add-ons"
           paragraph="Add-ons help enhance your gaming experience."
         />
-        <Checkbox
-          title={"Online Service"}
-          description={"Access to multiplayer games"}
-          price={1}
-          name="Online Service"
-          value="Online Service"
-          addOns={addOns}
-          setAddOns={setAddOns}
-        />
-        <Checkbox
-          title={"Larger Storage"}
-          description={"Extra 1TB of cloud save"}
-          price={2}
-          name="Larger Storage"
-          value="Larger Storage"
-          addOns={addOns}
-          setAddOns={setAddOns}
-        />
-        <Checkbox
-          title={"Customizable Profile"}
-          description={"Custom theme on your profile"}
-          price={2}
-          name="Customizable Profile"
-          value="Customizable Profile"
-          addOns={addOns}
-          setAddOns={setAddOns}
-        />
+        {checkboxOptions.map((checkbox) => (
+          <Checkbox
+            title={checkbox.title}
+            description={checkbox.description}
+            price={checkbox.price}
+          />
+        ))}
       </form>
       <div className={styles.buttonsWrapper}>
         <Link to="/select-plan">
