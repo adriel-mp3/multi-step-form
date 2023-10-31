@@ -1,0 +1,32 @@
+.button {
+  color: var(--white);
+  border: none;
+  padding: 13px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-family: "Ubuntu", sans-serif;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: 0.3s;
+}
+
+.button.default {
+  background: var(--marine-blue);
+}
+
+.button.accent {
+  background: var(--purplish-blue);
+}
+
+.button.none {
+  background: transparent;
+  color: var(--cool-gray);
+}
+
+.button:hover {
+  filter: brightness(110%);
+}
+
+.button.none:hover {
+  color: var(--marine-blue);
+}
