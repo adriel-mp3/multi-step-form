@@ -1,5 +1,5 @@
 .switchRoot {
-  width: 42px;
+  width: 45px;
   height: 25px;
   background-color: var(--marine-blue);
   border-radius: 9999px;
@@ -14,17 +14,17 @@
 
 .switchThumb {
   display: block;
-  width: 18px;
-  height: 18px;
+  width: 17px;
+  height: 17px;
   background-color: white;
   border-radius: 9999px;
   box-shadow: 0 2px 2px var(--black-a7);
   transition: transform 100ms;
-  transform: translateX(2px);
+  transform: translateX(4px);
   will-change: transform;
 }
 .switchThumb[data-state="checked"] {
-  transform: translateX(19px);
+  transform: translateX(22px);
 }
 
 .label {

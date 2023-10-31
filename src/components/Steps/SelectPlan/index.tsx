@@ -14,9 +14,14 @@ import styles from "./styles.module.css";
 import { planOptions } from "./helper/plansOptions";
 
 export const SelectPlan = () => {
-  const { selectedPlan, setSelectedPlan, period } =
-    React.useContext(FormContext);
-  const navigate = useNavigate();
+  const { period, setPeriod } = React.useContext(FormContext);
+
+  function toggleSwitch(value: boolean) {
+    if (value) {
+      return setPeriod("yearly");
+    }
+    setPeriod("monthly");
+  }
 
   return (
     <div className={`formContainer ${styles.wrapper}`}>
@@ -34,7 +39,13 @@ export const SelectPlan = () => {
           >
             Monthly
           </span>
-          <Switch label="Plans" hideLabel={true} />
+          <Switch
+            id="plansSwitch"
+            label="Select Your Plan"
+            hideLabel={true}
+            onCheckedChange={toggleSwitch}
+            value={period}
+          />
           <span className={period === "yearly" ? `${styles.periodActive}` : ""}>
             Yearly
           </span>
