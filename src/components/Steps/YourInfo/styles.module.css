@@ -9,6 +9,10 @@
   flex: 1;
 }
 
+.buttonWrapper {
+  margin-left: auto;
+}
+
 @media (max-width:900px) {
   .buttonWrapper {
     position: fixed;
@@ -16,5 +20,6 @@
     right: 0px;
     background:var(--magnolia);
     padding: 20px;
+    margin-left: initial;
   }
 }

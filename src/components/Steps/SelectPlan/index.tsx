@@ -5,28 +5,44 @@ import { useNavigate } from "react-router-dom";
 import { FormContext } from "@/context/FormContext";
 
 import { Header } from "@/components/Form/Header";
-import { NextStep } from "@/components/Button/NextStep/index";
-import { GoBack } from "@/components/Button/GoBack/index";
-import { Switch } from "@/components/Switch";
+import { Switch } from "@/components/Form/Switch";
 import { RadioGroup } from "@/components/Form/RadioGroup";
+import { Button } from "@/components/Button";
 
-import styles from "./styles.module.css";
 import { planOptions } from "./helper/plansOptions";
 
+import styles from "./styles.module.css";
+
 export const SelectPlan = () => {
-  const { selectedPlan, setSelectedPlan, period } =
-    React.useContext(FormContext);
   const navigate = useNavigate();
+  const { period, setPeriod, selectedPlan, setSelectedPlan } =
+    React.useContext(FormContext);
+
+  function toggleSwitch(value: boolean) {
+    if (value) {
+      return setPeriod("yearly");
+    }
+    setPeriod("monthly");
+  }
+
+  function handleValueChange(value: string) {
+    setSelectedPlan(value);
+  }
 
   return (
     <div className={`formContainer ${styles.wrapper}`}>
       <form>
         <Header
           title="Select your plan"
-          paragraph="You have the optiow of monthly or yearly billing."
+          paragraph="You have the option of monthly or yearly billing."
         />
         <div className={styles.radioWrapper}>
-          <RadioGroup options={planOptions} />
+          <RadioGroup
+            options={planOptions}
+            ariaLabel="Select your plan"
+            onValueChange={handleValueChange}
+            value={selectedPlan}
+          />
         </div>
         <div className={styles.switcherWrapper}>
           <span
@@ -34,15 +50,25 @@ export const SelectPlan = () => {
           >
             Monthly
           </span>
-          <Switch label="Plans" hideLabel={true} />
+          <Switch
+            id="plansSwitch"
+            label="Monthly or Yearly?"
+            hideLabel={true}
+            onCheckedChange={toggleSwitch}
+            value={period}
+          />
           <span className={period === "yearly" ? `${styles.periodActive}` : ""}>
             Yearly
           </span>
         </div>
       </form>
       <div className={styles.buttonsWrapper}>
-        <GoBack onClick={() => navigate("/")} />
-        <NextStep onClick={() => navigate("/add-ons")} />
+        <Button as="button" background="none" onClick={() => navigate("/")}>
+          Go Back
+        </Button>
+        <Button as="button" onClick={() => navigate("/add-ons")}>
+          Next Step
+        </Button>
       </div>
     </div>
   );
