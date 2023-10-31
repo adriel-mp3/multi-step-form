@@ -1,11 +1,10 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { Header } from "@/components/Form/Header/index";
-import { Checkbox } from "@/components/Steps/AddOns/Checkbox";
-import { GoBack } from "@/components/Button/GoBack/index";
-import { NextStep } from "@/components/Button/NextStep/index";
+import { Checkbox } from "@/components/Form/Checkbox";
+import { Button } from "@/components/Button";
 
 import { FormContext } from "@/context/FormContext";
 
@@ -15,6 +14,7 @@ import styles from "./styles.module.css";
 
 export const AddOns = () => {
   const { addOns, setAddOns } = React.useContext(FormContext);
+  const navigate = useNavigate();
 
   return (
     <div className={`formContainer ${styles.wrapper}`}>
@@ -32,12 +32,10 @@ export const AddOns = () => {
         ))}
       </form>
       <div className={styles.buttonsWrapper}>
-        <Link to="/select-plan">
-          <GoBack />
-        </Link>
-        <Link to="/summary">
-          <NextStep />
-        </Link>
+        <Button onClick={() => navigate("/select-plan")} background="none">
+          Go Back
+        </Button>
+        <Button onClick={() => navigate("/summary")}>Next Step</Button>
       </div>
     </div>
   );

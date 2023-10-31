@@ -1,11 +1,11 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { FormContext } from "@/context/FormContext";
 
 import { Header } from "@/components/Form/Header/index";
-import { GoBack } from "@/components/Button/GoBack/index";
+import { Button } from "@/components/Button";
 
 import { prices, adds } from "./helper/summary";
 
@@ -13,6 +13,7 @@ import styles from "./styles.module.css";
 
 export const Summary = () => {
   const { selectedPlan, period, addOns } = React.useContext(FormContext);
+  const navigate = useNavigate();
 
   function calculateTotal() {
     const planTotal = prices[period][selectedPlan];
@@ -62,12 +63,12 @@ export const Summary = () => {
         </div>
       </div>
       <div className={styles.buttonsWrapper}>
-        <Link to="/select-plan">
-          <GoBack />
-        </Link>
-        <Link to="/thank-you">
-          <button className={styles.button}>Confirm</button>
-        </Link>
+        <Button background="none" onClick={() => navigate("/select-plan")}>
+          Go Back
+        </Button>
+        <Button background="accent" onClick={() => navigate("/thank-you")}>
+          Confirm
+        </Button>
       </div>
     </div>
   );

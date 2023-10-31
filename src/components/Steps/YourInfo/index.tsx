@@ -8,7 +8,7 @@ import { FormContext } from "@/context/FormContext";
 
 import { Header } from "@/components/Form/Header/index";
 import { Input } from "@/components/Form/Input/index";
-import { NextStep } from "@/components/Button/NextStep/index";
+import { Button } from "@/components/Button";
 
 import styles from "./styles.module.css";
 
@@ -39,18 +39,21 @@ export const YourInfo = () => {
           paragraph="Please provide your name, email address, and phone number."
         />
         <Input
+          id="name"
           label="Name"
           placeholder="e.g. Stephen King"
           type="text"
           {...name}
         />
         <Input
+          id="email"
           label="Email Address"
           placeholder="e.g. stephenking@lorem.com"
           type="email"
           {...email}
         />
         <Input
+          id="phone"
           label="Phone Number"
           placeholder="+99 (99) 99999-9999"
           type="tel"
@@ -58,7 +61,7 @@ export const YourInfo = () => {
         />
       </form>
       <div className={styles.buttonWrapper}>
-        <NextStep onClick={handleNextButton} />
+        <Button onClick={handleNextButton}>Next Step</Button>
       </div>
     </div>
   );
