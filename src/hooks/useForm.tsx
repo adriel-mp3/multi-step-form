@@ -1,5 +1,20 @@
 import React from "react";
 
+type FormEmailType = {
+  regex: RegExp;
+  message: string;
+};
+
+type FormNumberType = {
+  regex: RegExp;
+  message: string;
+};
+
+interface FormTypes {
+  email?: FormEmailType;
+  number?: FormNumberType;
+}
+
 const types = {
   email: {
     regex:
@@ -11,14 +26,14 @@ const types = {
       /^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})-?(\d{4}))$/,
     message: "Digite seu o número do seu celular ou fixo com ou sem o DDD",
   },
-};
+} as FormTypes;
 
-export const useForm = (type) => {
+export const useForm = (type: keyof FormTypes | undefined) => {
   const [value, setValue] = React.useState("");
-  const [error, setError] = React.useState(null);
+  const [error, setError] = React.useState("");
 
-  function validate(value) {
-    if (type === false) {
+  function validate(value: string) {
+    if (type === undefined) {
       return true;
     }
 
@@ -27,16 +42,16 @@ export const useForm = (type) => {
       return false;
     }
 
-    if (types[type] && !types[type].regex.test(value)) {
-      setError(types[type].message);
+    if (types[type]?.message && !types[type]?.regex.test(value)) {
+      setError(types[type]!.message);
       return false;
     }
 
-    setError(null);
+    setError("");
     return true;
   }
 
-  function onChange({ target }) {
+  function onChange({ target }: React.ChangeEvent<HTMLInputElement>) {
     if (error) validate(target.value);
     setValue(target.value);
   }
